@@ -19,6 +19,7 @@ module.exports = {
       'jest': true
     },
     'rules': {
+      'react/state-in-constructor': 0,
       'arrow-body-style': ["error", "as-needed"],
       //  allow .js extensions for JSX.
       'react/jsx-filename-extension': [
