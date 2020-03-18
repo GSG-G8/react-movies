@@ -1,16 +1,15 @@
 import React from 'react';
 
-const SearchArea = () => (
-  <div className="container">
-    <div className="row">
-      <section className="col s4 offset-s4">
-        <form action="">
-          <div className="input-field" />
-          <input placeholder="Search movie" type="text" />
-        </form>
-      </section>
-    </div>
-  </div>
+const SearchForm = ({ movie }) => (
+  <form
+    onSubmit={e => {
+      e.preventDefault();
+      movie(e.target.elements[0].value);
+    }}
+  >
+    <input type="text" />
+    <input type="submit" />
+  </form>
 );
 
-export default SearchArea;
+export default SearchForm;
